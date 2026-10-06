@@ -1,4 +1,58 @@
 <!doctype html>
+<html lang="zh-Hant">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iPLoT 工作坊</title>
-<p>還沒有東西。
+<style>
+:root { color-scheme: light dark; --bg: #ffffff; --fg: #1c1d21; --muted: #6b7080; --line: #dfe2e9; --accent: #3d6ee0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #242529; --fg: #ebecf0; --muted: #9a9fae; --line: #34363f; --accent: #7398f4; }
+}
+body { margin: 0 auto; max-width: 760px; padding: 20px 16px 40px; background: var(--bg); color: var(--fg);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Segoe UI", sans-serif; }
+h1 { font-size: 22px; margin: 0 0 16px; }
+h2 { font-size: 17px; margin: 28px 0 8px; }
+a { color: var(--accent); }
+.box { border-top: 1px solid var(--line); padding: 12px 0; }
+.icon { font-size: 22px; margin-right: 6px; }
+.muted, .sha { color: var(--muted); font-size: 13px; }
+.sha { font-family: ui-monospace, Menlo, monospace; overflow-wrap: anywhere; }
+.notes { white-space: pre-line; }
+</style>
+</head>
+<body>
+<h1>iPLoT 工作坊</h1>
+<h2>iPLoT 0.5.0</h2>
+<div class="box">
+<p><a href="https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.0.zip">下載 iPLoT-v0.5.0.zip</a></p>
+<p class="sha">sha256 581abd2fa7f58e0b57bf42010df85044a8ee97a15a13ac4bba1933e4d2292431</p>
+<p>解壓縮後雙擊 iPLoT.command；第一次啟動會自動安裝介面，要有網路。</p>
+<p class="notes">M3「更新與工作坊」：多了兩個隨附模組——「更新」把核心換成新版（D69），「工作坊」從一份清單安裝、更新別人做的模組（D70）——以及開發端的發佈工具 `tools/publish.py`。兩個來源網址寫在 `config.py`（D71），隨附的已經填好 GitHub Pages 上 `iplot-workshop` 的網址（D79），改成 `None` 就不連網；按了才連網，平常使用不需要網路。模組有自己的版本與更新紀錄（模組資料夾裡的 `CHANGELOG.md`，D78）。`app` 多 `page`、`config`、`version`，`api_version` 2 → 3（D72）。從工作坊裝進來的模組，第一次執行前先問一次（D59 採用、D73）。</p>
+</div>
+<h2>模組</h2>
+<p>在 iPLoT 裡按「工作坊」就能安裝、更新這些模組；也可以下載 zip、解開後把資料夾放進 modules/。</p>
+<div class="box">
+<p><span class="icon">🧭</span><b>開工</b> <span class="muted">0.5.0</span></p>
+<p>每日入口：一鍵打開 iPLoT 資料夾、docs/、設計文件和終端機，然後開工。</p>
+<p class="notes">這一版：跟 0.4.0 一樣，第一次放進工作坊。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E9%96%8B%E5%B7%A5.zip">下載 開工.zip</a></p>
+<p class="sha">sha256 f2213cd4402c77f6767916927a7836ba577f6bbac5f0b6156832a26d2057877f</p>
+</div>
+<div class="box">
+<p><span class="icon">🖥️</span><b>作業系統</b> <span class="muted">0.5.0</span></p>
+<p>碰作業系統的事都在這個資料夾：打開檔案、編輯、在資料夾中顯示、開終端機、搬到垃圾桶。
+核心一行作業系統的程式碼都沒有；要改這些行為，改這裡的 mac.py / win.py / linux.py。</p>
+<p class="notes">這一版：`linux.py`、`win.py` 的 `webview_ready` 回的那一句改了：網頁面板開不起來時不再叫人用安全模式（iPLoT 會自己改用備用面板）。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.zip">下載 作業系統.zip</a></p>
+<p class="sha">sha256 62ad575bf62c99aa88aef5aa81f7e1a6d6a183d87475a8b7ebc6b3c53e74644d</p>
+</div>
+<div class="box">
+<p><span class="icon">🧬</span><b>打開核心原始碼</b> <span class="muted">0.5.0</span></p>
+<p>在 Finder 打開 core/ 資料夾。所有人都能改原始碼，從看得到它開始。</p>
+<p class="notes">這一版：跟 0.4.0 一樣，第一次放進工作坊。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E6%89%93%E9%96%8B%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%A7%8B%E7%A2%BC.zip">下載 打開核心原始碼.zip</a></p>
+<p class="sha">sha256 50dc01f601559a7c9f9e0aa46b52a285bdbb0da2b73e18213c24a2df1a6a8669</p>
+</div>
+</body>
+</html>
