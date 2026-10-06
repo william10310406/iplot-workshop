@@ -4,7 +4,7 @@
       "name": "開工",
       "version": "0.5.0",
       "zip_url": "https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E9%96%8B%E5%B7%A5.zip",
-      "sha256": "f2213cd4402c77f6767916927a7836ba577f6bbac5f0b6156832a26d2057877f",
+      "sha256": "865e3edaf4115a17dc3147c6c36a5fe2aa77042e89456787115fb7d31465d381",
       "description": "每日入口：一鍵打開 iPLoT 資料夾、docs/、設計文件和終端機，然後開工。",
       "icon": "🧭",
       "notes": "跟 0.4.0 一樣，第一次放進工作坊。"
@@ -13,7 +13,7 @@
       "name": "作業系統",
       "version": "0.5.0",
       "zip_url": "https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.zip",
-      "sha256": "62ad575bf62c99aa88aef5aa81f7e1a6d6a183d87475a8b7ebc6b3c53e74644d",
+      "sha256": "ced9e662c7cb8723698786e483eca573ae543ccef0801aba90068e8cf5a99b52",
       "description": "碰作業系統的事都在這個資料夾：打開檔案、編輯、在資料夾中顯示、開終端機、搬到垃圾桶。\n核心一行作業系統的程式碼都沒有；要改這些行為，改這裡的 mac.py / win.py / linux.py。",
       "icon": "🖥️",
       "notes": "`linux.py`、`win.py` 的 `webview_ready` 回的那一句改了：網頁面板開不起來時不再叫人用安全模式（iPLoT 會自己改用備用面板）。"
@@ -22,7 +22,7 @@
       "name": "打開核心原始碼",
       "version": "0.5.0",
       "zip_url": "https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E6%89%93%E9%96%8B%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%A7%8B%E7%A2%BC.zip",
-      "sha256": "50dc01f601559a7c9f9e0aa46b52a285bdbb0da2b73e18213c24a2df1a6a8669",
+      "sha256": "50df36dbceb2a5b6da980c7f513d11754a666e4433aee42f40a98182680b3650",
       "description": "在 Finder 打開 core/ 資料夾。所有人都能改原始碼，從看得到它開始。",
       "icon": "🧬",
       "notes": "跟 0.4.0 一樣，第一次放進工作坊。"
