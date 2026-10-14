@@ -23,21 +23,21 @@ a { color: var(--accent); }
 </head>
 <body>
 <h1>iPLoT 工作坊</h1>
-<h2>iPLoT 0.5.0</h2>
+<h2>iPLoT 0.5.1</h2>
 <div class="box">
-<p><a href="https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.0.zip">下載 iPLoT-v0.5.0.zip</a></p>
-<p class="sha">sha256 3819c002dced7da2336e6215a4430cdf9c4b8f192447f6ddd6c5b1e1a450f461</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.1.zip">下載 iPLoT-v0.5.1.zip</a></p>
+<p class="sha">sha256 c915ef9b34810c2fb15aec5df52721785b8c4b7397a047a4bcfbe47a829a09de</p>
 <p>解壓縮後雙擊 iPLoT.command；第一次啟動會自動安裝介面，要有網路。</p>
-<p class="notes">M3「更新與工作坊」：多了兩個隨附模組——「更新」把核心換成新版（D69），「工作坊」從一份清單安裝、更新別人做的模組（D70）——以及開發端的發佈工具 `tools/publish.py`。兩個來源網址寫在 `config.py`（D71），隨附的已經填好 GitHub Pages 上 `iplot-workshop` 的網址（D79），改成 `None` 就不連網；按了才連網，平常使用不需要網路。模組有自己的版本與更新紀錄（模組資料夾裡的 `CHANGELOG.md`，D78）。`app` 多 `page`、`config`、`version`，`api_version` 2 → 3（D72）。從工作坊裝進來的模組，第一次執行前先問一次（D59 採用、D73）。</p>
+<p class="notes">這一版多了三個工作坊模組：「互通」讓任何模組不開面板也能打開（Spotlight、Dock、一行指令；在「互通」按「加上」之後也能直接 python3 iplot.py），「主控面板」讓任何模組叫出面板，「行事曆」打開就是這個月的月曆，每天寫行程、心情、看到了什麼、做了什麼、放照片，存成一天一個資料夾並產生網頁，打開「公開」的日子可以另外產生一份放上網路用的資料夾。核心只改了一件事：面板停在下一層時，app.run 在這一層找不到就退到最上層找。按「更新」只換核心，這三個模組到工作坊裝；新下載的 iPLoT 已經帶著它們。</p>
 </div>
 <h2>模組</h2>
 <p>在 iPLoT 裡按「工作坊」就能安裝、更新這些模組；也可以下載 zip、解開後把資料夾放進 modules/。</p>
 <div class="box">
-<p><span class="icon">🧭</span><b>開工</b> <span class="muted">0.5.0</span></p>
+<p><span class="icon">🧭</span><b>開工</b> <span class="muted">0.5.1</span></p>
 <p>每日入口：一鍵打開 iPLoT 資料夾、docs/、設計文件和終端機，然後開工。</p>
-<p class="notes">這一版：跟 0.4.0 一樣，第一次放進工作坊。</p>
+<p class="notes">這一版：加上「互通」的那一小段：可以直接 python3 iplot.py。</p>
 <p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E9%96%8B%E5%B7%A5.zip">下載 開工.zip</a></p>
-<p class="sha">sha256 865e3edaf4115a17dc3147c6c36a5fe2aa77042e89456787115fb7d31465d381</p>
+<p class="sha">sha256 baccc1d431f2b80758f7003c205a4ad804614a24caaa6ce3e73162da8765f668</p>
 </div>
 <div class="box">
 <p><span class="icon">🖥️</span><b>作業系統</b> <span class="muted">0.5.0</span></p>
@@ -48,11 +48,33 @@ a { color: var(--accent); }
 <p class="sha">sha256 ced9e662c7cb8723698786e483eca573ae543ccef0801aba90068e8cf5a99b52</p>
 </div>
 <div class="box">
-<p><span class="icon">🧬</span><b>打開核心原始碼</b> <span class="muted">0.5.0</span></p>
+<p><span class="icon">🧬</span><b>打開核心原始碼</b> <span class="muted">0.5.1</span></p>
 <p>在 Finder 打開 core/ 資料夾。所有人都能改原始碼，從看得到它開始。</p>
-<p class="notes">這一版：跟 0.4.0 一樣，第一次放進工作坊。</p>
+<p class="notes">這一版：加上「互通」的那一小段：可以直接 python3 iplot.py。</p>
 <p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E6%89%93%E9%96%8B%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%A7%8B%E7%A2%BC.zip">下載 打開核心原始碼.zip</a></p>
-<p class="sha">sha256 50df36dbceb2a5b6da980c7f513d11754a666e4433aee42f40a98182680b3650</p>
+<p class="sha">sha256 b684f62c1ebff4ff09cf39603c231d95c87de4001c110cdb470f6cad991ba146</p>
+</div>
+<div class="box">
+<p><span class="icon">🔗</span><b>互通</b> <span class="muted">0.1.0</span></p>
+<p>互通：任何模組都能在面板外打開——Spotlight、Dock、一行指令、直接 python3 iplot.py。
+按這裡會先同步一次捷徑，再顯示現在的狀態；舊模組要能直接執行，在狀態頁按「加上」。</p>
+<p class="notes">這一版：第一版：任何模組都能在面板外打開——Spotlight 或 Dock 上的捷徑、一行指令、在模組資料夾直接 `python3 iplot.py`——打開之後跟在面板裡一樣拿得到 `app`，對話框與輸出用彈出式視窗。需要 iPLoT 0.5；模組要能直接執行（＋ 新建的也一樣），在面板按「互通」，在狀態頁看清楚會改哪幾個檔、按「加上」（只改 iPLoT 的 modules/ 裡的，改之前存快照），同步本身不改任何模組檔案；模組跑完、小視窗還在時，底下有回去鈕：有「行事曆」就回行事曆，否則回主控面板（要有那個模組）；模組開著自己的頁面（app.page）的期間，小視窗不會因為跑太久冒出來，關掉它也只是藏起來；載不進介面套件時說出真正的原因；捷徑只在 macOS。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E4%BA%92%E9%80%9A.zip">下載 互通.zip</a></p>
+<p class="sha">sha256 cb54cafad1cde62bb7edc56c8ffca7375054c986fec6f3d232d2d66d5e4e1392</p>
+</div>
+<div class="box">
+<p><span class="icon">🎛️</span><b>主控面板</b> <span class="muted">0.1.0</span></p>
+<p>主控面板：打開 iPLoT 的面板；已經開著就叫到最前面。任何模組寫 app.run(&quot;主控面板&quot;) 就會用到這裡。</p>
+<p class="notes">這一版：第一版：打開 iPLoT 的面板；已經開著就叫到最前面。任何模組寫 `app.run(&quot;主控面板&quot;)` 就會用到這裡；在面板外（「互通」的捷徑、指令）也一樣。叫到最前面只在 macOS；別的系統一律開一個新的面板。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E4%B8%BB%E6%8E%A7%E9%9D%A2%E6%9D%BF.zip">下載 主控面板.zip</a></p>
+<p class="sha">sha256 363506b441d0769455f862adb97abe85ec2e532e1c09087b9273c79eb8c3ebda</p>
+</div>
+<div class="box">
+<p><span class="icon">📅</span><b>行事曆</b> <span class="muted">0.1.0</span></p>
+<p>行事曆：打開就是這個月的月曆；每天寫行程、心情、看到了什麼、做了什麼，放圖片，存成一天一個資料夾並產生網頁。</p>
+<p class="notes">這一版：第一版：打開就是這個月的月曆，每天寫行程、心情、看到了什麼、做了什麼，放照片；全部存成一天一個資料夾（預設 ~/Documents/行事曆），並產生成網頁（綜合、年、月、日）；打開「公開」的日子，按「發佈」另外產生一份可以放上網路的 發佈/（照片縮小、拿掉拍攝地點，不會幫忙上傳）。上方的模組列叫得到任何模組，任何模組寫 app.run(&quot;行事曆&quot;) 就叫得到它。需要「互通」；只在 macOS 驗過。</p>
+<p><a href="https://william10310406.github.io/iplot-workshop/%E6%A8%A1%E7%B5%84/%E8%A1%8C%E4%BA%8B%E6%9B%86.zip">下載 行事曆.zip</a></p>
+<p class="sha">sha256 38fcf92146ab4cd1b4110ce1ed579c8cb5666517645b93bf1ef83b8e373f90b5</p>
 </div>
 </body>
 </html>

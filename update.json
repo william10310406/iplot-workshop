@@ -1,6 +1,6 @@
 {
-  "version": "0.5.0",
-  "zip_url": "https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.0.zip",
-  "sha256": "3819c002dced7da2336e6215a4430cdf9c4b8f192447f6ddd6c5b1e1a450f461",
-  "notes": "M3「更新與工作坊」：多了兩個隨附模組——「更新」把核心換成新版（D69），「工作坊」從一份清單安裝、更新別人做的模組（D70）——以及開發端的發佈工具 `tools/publish.py`。兩個來源網址寫在 `config.py`（D71），隨附的已經填好 GitHub Pages 上 `iplot-workshop` 的網址（D79），改成 `None` 就不連網；按了才連網，平常使用不需要網路。模組有自己的版本與更新紀錄（模組資料夾裡的 `CHANGELOG.md`，D78）。`app` 多 `page`、`config`、`version`，`api_version` 2 → 3（D72）。從工作坊裝進來的模組，第一次執行前先問一次（D59 採用、D73）。"
+  "version": "0.5.1",
+  "zip_url": "https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.1.zip",
+  "sha256": "c915ef9b34810c2fb15aec5df52721785b8c4b7397a047a4bcfbe47a829a09de",
+  "notes": "這一版多了三個工作坊模組：「互通」讓任何模組不開面板也能打開（Spotlight、Dock、一行指令；在「互通」按「加上」之後也能直接 python3 iplot.py），「主控面板」讓任何模組叫出面板，「行事曆」打開就是這個月的月曆，每天寫行程、心情、看到了什麼、做了什麼、放照片，存成一天一個資料夾並產生網頁，打開「公開」的日子可以另外產生一份放上網路用的資料夾。核心只改了一件事：面板停在下一層時，app.run 在這一層找不到就退到最上層找。按「更新」只換核心，這三個模組到工作坊裝；新下載的 iPLoT 已經帶著它們。"
 }
