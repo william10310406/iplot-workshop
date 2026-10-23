@@ -1,4 +1,5 @@
 {
+  "notice": "這份清單不再更新。新的清單在 https://william10310406.github.io/iplot-modules/index.json：把 config.py 的 WORKSHOP_URL 換成這一行。",
   "modules": [
     {
       "name": "開工",

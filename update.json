@@ -1,6 +1,6 @@
 {
-  "version": "0.5.1",
-  "zip_url": "https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.1.zip",
-  "sha256": "c915ef9b34810c2fb15aec5df52721785b8c4b7397a047a4bcfbe47a829a09de",
-  "notes": "這一版多了三個工作坊模組：「互通」讓任何模組不開面板也能打開（Spotlight、Dock、一行指令；在「互通」按「加上」之後也能直接 python3 iplot.py），「主控面板」讓任何模組叫出面板，「行事曆」打開就是這個月的月曆，每天寫行程、心情、看到了什麼、做了什麼、放照片，存成一天一個資料夾並產生網頁，打開「公開」的日子可以另外產生一份放上網路用的資料夾。核心只改了一件事：面板停在下一層時，app.run 在這一層找不到就退到最上層找。按「更新」只換核心，這三個模組到工作坊裝；新下載的 iPLoT 已經帶著它們。"
+  "version": "0.5.2",
+  "zip_url": "https://william10310406.github.io/iplot-workshop/iPLoT-v0.5.2.zip",
+  "sha256": "68802f9d1281a80c1c9acb206aaee40cf7e20dc3af9e785c3d4b359cd9b88f83",
+  "notes": "這一版的工作坊清單換到新的地方：有 GitHub 帳號的人都能上傳自己的模組，沒有人審查，清單上標出每個模組的上傳者。核心邏輯一行沒改，只換了版本號。「更新」不碰 config.py 與 modules/，已經在用的人按完「更新」還要自己做兩件事：①把 .backup/download-0.5.2.zip 解開（在終端機進到 iPLoT 資料夾打 open .backup，Finder 就會打開它），用裡面的 iPLoT-v0.5.2/modules/工作坊 整個換掉自己的 modules/工作坊；②打開 config.py，把 WORKSHOP_URL 那一行換成 WORKSHOP_URL = \"https://william10310406.github.io/iplot-modules/index.json\"。兩件做完再執行「重新啟動」。只做②的話，舊的工作坊看到的是空的清單；兩件都不做也能用，只是不會有新模組。新下載的 iPLoT 不用做。"
 }
